@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
+    stage('myStage'){
+      steps {
+        sh 'ls -la'
+      }
+    }
     stage('Build') {
       steps {
-        Process p = Runtime.getRuntime().exec(new String[]{"bash","-c","./hello-world.sh"});
+        sh 'ls'
       }
     }
   }
