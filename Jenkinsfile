@@ -1,12 +1,5 @@
-node {
-    stage('Build') {
-        checkout scm
+stage('Build') {
+    steps {
         sh './hello-world.sh'
-    }
-    stage('Test') {
-        //
-    }
-    stage('Deploy') {
-        //
     }
 }
