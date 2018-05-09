@@ -1,8 +1,19 @@
 pipeline {
+    agent any
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 sh './hello-world.sh'
+            }
+        }
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
             }
         }
     }
