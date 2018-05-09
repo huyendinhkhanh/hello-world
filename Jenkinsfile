@@ -1,15 +1,9 @@
 pipeline {
-  agent any
-  stages {
-    stage('myStage'){
-      steps {
-        sh 'ls -la'
-      }
+    stages {
+        stage('Test') {
+            steps {
+                sh './hello-world.sh'
+            }
+        }
     }
-    stage('Build') {
-      steps {
-        sh 'ls'
-      }
-    }
-  }
 }
