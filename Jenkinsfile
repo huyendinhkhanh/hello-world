@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        ./hello-world.sh
+        Process p = Runtime.getRuntime().exec(new String[]{"bash","-c","./hello-world.sh"});
       }
     }
   }
