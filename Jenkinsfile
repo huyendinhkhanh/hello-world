@@ -1,15 +1,7 @@
-pipeline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                sh './hello-world.sh'
-            }
-        }
+node{
+  stage ('Build') {
+    withMaven(
+      sh "./hello-world.sh"
     }
-    post {
-        always {
-            junit 'build/reports/**/*.xml'
-        }
-    }
+  }
 }
