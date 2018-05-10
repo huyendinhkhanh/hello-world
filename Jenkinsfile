@@ -1,9 +1,15 @@
 pipeline {
+    agent any
     stages {
         stage('Test') {
             steps {
-                echo 'hello'
+                sh './hello-world.sh'
             }
+        }
+    }
+    post {
+        always {
+            junit 'build/reports/**/*.xml'
         }
     }
 }
