@@ -1,5 +1,10 @@
-node {
-  stage('HelloWorld') {
-    sh './hello-world.sh'
-  }
+pipeline {
+    stages {
+        stage('Test') {
+            steps {
+                pwd
+                sh './hello-world.sh'
+            }
+        }
+    }
 }
