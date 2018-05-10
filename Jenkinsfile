@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building'
+                git clone https://github.com/huyendinhkhanh/hello-world.git
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing'
+                //
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying'
+                //
             }
         }
     }
