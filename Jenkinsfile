@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git clone https://github.com/huyendinhkhanh/hello-world.git
+                git clone 'https://github.com/huyendinhkhanh/hello-world.git'
             }
         }
         stage('Test') {
