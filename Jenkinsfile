@@ -1,9 +1,5 @@
-pipeline {
-    stages {
-        stage('Test') {
-            steps {
-                sh './hello-world.sh'
-            }
-        }
-    }
+node {
+  stage('HelloWorld') {
+    sh './hello-world.sh'
+  }
 }
