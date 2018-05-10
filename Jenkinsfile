@@ -1,5 +1,9 @@
-stage('Build') {
-    steps {
-        sh './hello-world.sh'
+pipeline {
+    stages {
+        stage('Test') {
+            steps {
+                sh './hello-world.sh'
+            }
+        }
     }
 }
