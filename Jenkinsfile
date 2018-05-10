@@ -1,7 +1,7 @@
 node{
   stage ('Build') {
     withMaven(
-      sh "./hello-world.sh"
+      sh "pwd"
     }
   }
 }
